@@ -29,11 +29,6 @@
 ![Aa]ssets/TextMesh Pro
 
 # Ficheros a incluir de Assets
-*.*
-!*.asset
-!*.terrainlayer
-!NPJfZXGv2.png
-
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
