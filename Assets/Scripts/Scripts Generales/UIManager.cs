@@ -65,6 +65,10 @@ public class UIManager : Singleton<UIManager>
                 playersInGameText.transform.position = startClientButton.transform.position;
                 Logger.Instance.LogInfo("Host iniciado...");
 
+                if(GameObject.Find("PlayerAuthorative(Clone)"))
+                {
+                    Destroy(GameObject.Find("PlayerAuthorative(Clone)"));
+                }
 
                 GameObject go = Instantiate(PrefabKiller, new Vector3(4,0,0), Quaternion.identity);
                 var check_spawn  = go.GetComponent<NetworkObject>();
@@ -72,11 +76,6 @@ public class UIManager : Singleton<UIManager>
                 if (!check_spawn.IsSpawned)
                 {
                     check_spawn.Spawn();
-                }
-
-                if(GameObject.Find("PlayerAuthorative(Clone)"))
-                {
-                    Destroy(GameObject.Find("PlayerAuthorative(Clone)"));
                 }
             }
                 
